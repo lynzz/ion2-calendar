@@ -243,7 +243,7 @@ export var CalendarPage = (function () {
         var isAfter = defaultDate.isAfter(startDate);
         if (!isAfter)
             return 0;
-        return defaultDate.subtract(startDate).month();
+        return defaultDate.diff(startDate, 'month');
     };
     CalendarPage.decorators = [
         { type: Component, args: [{
