@@ -19,6 +19,7 @@ export interface CalendarDay {
   title?: string;
   subTitle?: string;
   marked?:boolean;
+  cssClass?:string;
   style?:{
     title?: string;
     subTitle?: string;
@@ -32,6 +33,7 @@ export class CalendarMonth {
 
 class dayConfig {
   date:Date;
+  cssClass?:string;
   marked?:boolean;
   disable?:boolean;
   title?:string;
@@ -396,6 +398,7 @@ export class CalendarPage{
       time: time,
       selected: false,
       marked: dayConfig ? dayConfig.marked || false : false,
+      cssClass: dayConfig ? dayConfig.cssClass : '',
       disable: dayConfig ? dayConfig.disable || _disable : _disable,
       title : dayConfig ? dayConfig.title || new Date(time).getDate().toString() : new Date(time).getDate().toString(),
       subTitle: dayConfig ? dayConfig.subTitle || '' : ''

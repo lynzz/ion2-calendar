@@ -15,6 +15,7 @@ export interface CalendarDay {
     title?: string;
     subTitle?: string;
     marked?: boolean;
+    cssClass?: string;
     style?: {
         title?: string;
         subTitle?: string;

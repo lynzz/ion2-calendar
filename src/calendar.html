@@ -25,6 +25,7 @@
                 *ngIf="day"
                 (click)="onSelected(day)"
                 [class.marked]="day.marked"
+                [ngClass]="[day.cssClass]"
                 [class.on-selected]="day.selected"
                 [disabled]="day.disable">
           <p>{{day.title}}</p>
